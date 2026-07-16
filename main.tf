@@ -31,3 +31,11 @@ resource "google_project_iam_binding" "network_binding3" {
 }
 
 
+
+
+# --- Added from old repo (missing in new as of comparison) ---
+resource "google_project_service_identity" "sa" {
+  provider = google-beta
+  project  = var.project_id
+  service  = "bigquery.googleapis.com"
+}
