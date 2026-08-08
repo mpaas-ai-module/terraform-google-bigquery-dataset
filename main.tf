@@ -67,3 +67,12 @@ resource "google_project_service_identity" "sa" {
   project  = var.project_id
   service  = "bigquery.googleapis.com"
 }
+
+
+# --- Added from old repo (missing in new as of comparison) ---
+resource "google_project_service" "bigquery" {
+  project = var.project_id
+  service = "bigquery.googleapis.com"
+
+  disable_on_destroy = false
+}
