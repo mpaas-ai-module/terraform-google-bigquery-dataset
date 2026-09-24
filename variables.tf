@@ -1,6 +1,6 @@
 variable "project_id" {
   type        = string
-  description = "Project id for the resource."
+  description = "Project id for the resource is temptest-dev-419685"
 }
 variable "dataset_name" {
   type        = list(string)
@@ -14,9 +14,3 @@ variable "location" {
   type        = string
   description = "Location of dataset"
 }
-variable "kms_key_name" {
-  type        = string
-  description = "The name of the kms for encrypting and decrypting the dataset."
-}
-
-
